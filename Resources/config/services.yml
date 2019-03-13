@@ -3,5 +3,7 @@ services:
         decorates: Oro\Bundle\WorkflowBundle\Command\LoadWorkflowDefinitionsCommand
 
     Hackoro\Bundle\WorkflowLoader\EventListener\UpdateWorkflowDefinitionListener:
+        arguments:
+            - '@doctrine'
         tags:
             - { name: oro_workflow.changes.listener, event: oro.workflow.before_update, method: onUpdateWorkflowDefinition, priority: 255 }
