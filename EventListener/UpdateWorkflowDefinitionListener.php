@@ -3,23 +3,22 @@
 namespace Hackoro\Bundle\WorkflowLoader\EventListener;
 
 use Doctrine\Bundle\DoctrineBundle\Registry;
-use Oro\Bundle\WorkflowBundle\Entity\Repository\WorkflowItemRepository;
 use Oro\Bundle\WorkflowBundle\Entity\WorkflowItem;
 use Oro\Bundle\WorkflowBundle\Entity\WorkflowStep;
 use Oro\Bundle\WorkflowBundle\Event\WorkflowChangesEvent;
-use Oro\Bundle\OrderBundle\Entity\Order;
 
 class UpdateWorkflowDefinitionListener
 {
     /**
      * @var Registry $registry
      */
-protected $registry;
+    protected $registry;
 
     public function __construct(Registry $registry)
     {
         $this->registry = $registry;
     }
+
     /**
      * @param WorkflowChangesEvent $event
      */
@@ -28,7 +27,7 @@ protected $registry;
         $newSteps = $event->getDefinition()->getSteps()->toArray();
         $oldSteps = $event->getOriginalDefinition()->getSteps()->toArray();
 
-        $getStepName = function(WorkflowStep $step){
+        $getStepName = function (WorkflowStep $step) {
             return $step->getName();
         };
 
