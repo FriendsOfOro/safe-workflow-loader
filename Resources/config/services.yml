@@ -1,0 +1,3 @@
+services:
+    Hackoro\Bundle\WorkflowLoader\Command\LoadWorkflowDefinitionsCommand:
+        decorates: Oro\Bundle\WorkflowBundle\Command\LoadWorkflowDefinitionsCommand
