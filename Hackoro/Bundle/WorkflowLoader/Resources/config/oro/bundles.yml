@@ -1,0 +1,2 @@
+bundles:
+    - { name: Hackoro\Bundle\WorkflowLoader\HackoroWorkflowLoaderBundle }

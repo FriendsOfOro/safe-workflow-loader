@@ -1,0 +1,38 @@
+{
+  "name": "hackoro/workflow-loader-bundle",
+  "type": "symfony-bundle",
+  "description": "Hackoro workflow loader bundle",
+  "homepage": "https://github.com/FriendsOfOro/safe-workflow-loader.git",
+  "keywords": ["Oro", "OroCommerce"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Oro, Inc",
+      "homepage": "http://orocommerce.com"
+    }
+  ],
+  "require": {
+    "oro/commerce": "~3.1.4"
+  },
+  "autoload": {
+    "psr-4": { "Hackoro\\Bundle\\WorkflowLoader\\": "" },
+    "exclude-from-classmap": ["/Tests/"]
+  },
+  "repositories": {
+    "oro": {
+      "type": "composer",
+      "url": "https://packagist.oroinc.com"
+    },
+    "asset-packagist": {
+      "type": "composer",
+      "url": "https://asset-packagist.oroinc.com"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
