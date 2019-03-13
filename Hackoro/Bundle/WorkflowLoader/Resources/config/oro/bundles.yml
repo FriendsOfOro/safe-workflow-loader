@@ -1,2 +1,2 @@
 bundles:
-    - { name: Hackoro\Bundle\WorkflowLoader\HackoroWorkflowLoaderBundle }
+    - { name: Hackoro\Bundle\WorkflowLoader\HackoroWorkflowLoaderBundle , priority: 1000}
